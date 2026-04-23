@@ -1,10 +1,9 @@
-// Shared constants for all TRXST pages.
-window.TRXST = {
+window.SwapSafe = {
   discordInvite: "https://discord.gg/SBhJwyuedn",
   currentYear: new Date().getFullYear(),
 };
 
-// Highlight the active nav link based on the page's data-page attribute.
+// highlight
 document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.dataset.page;
   document.querySelectorAll("[data-nav]").forEach((el) => {
@@ -17,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Wire up any element with [data-discord] to open the invite.
+  // wire up any element with [data-discord]
   document.querySelectorAll("[data-discord]").forEach((el) => {
-    el.setAttribute("href", window.TRXST.discordInvite);
+    el.setAttribute("href", window.SwapSafe.discordInvite);
     el.setAttribute("target", "_blank");
     el.setAttribute("rel", "noopener noreferrer");
   });
 
   const yr = document.getElementById("year");
-  if (yr) yr.textContent = window.TRXST.currentYear;
+  if (yr) yr.textContent = window.SwapSafe.currentYear;
 });
