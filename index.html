@@ -8,6 +8,14 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="images/logo.png" />
+    <style>
+      [data-reveal] { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+      [data-reveal].reveal-in { opacity: 1; transform: none; }
+      .lift { transition: transform .2s ease, border-color .2s ease; }
+      .lift:hover { transform: translateY(-2px); }
+      @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+      .shimmer { background: linear-gradient(90deg, transparent, rgba(79,70,229,.25), transparent); background-size: 200% 100%; animation: shimmer 3s linear infinite; }
+    </style>
   </head>
   <body data-page="home" class="bg-[#0a0a0a] text-zinc-300 antialiased selection:bg-indigo-500/30 selection:text-indigo-200" style="font-family: 'Inter', sans-serif;">
     <div class="bg-emerald-500/10 border-b border-emerald-500/20 px-4 py-2 flex items-center justify-center gap-2">
@@ -20,16 +28,13 @@
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center gap-8">
             <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
-              <div class="w-7 h-7 rounded-md bg-white flex items-center justify-center">
-                <iconify-icon icon="solar:safe-square-linear" class="text-black text-lg"></iconify-icon>
-              </div>
+              <img src="images/logo.png" alt="SwapSafe" class="w-7 h-7 rounded-md" />
               <span class="text-white font-semibold text-lg tracking-tighter">SwapSafe</span>
             </a>
             <div class="hidden md:flex items-center space-x-6">
               <a href="index.html" data-nav="home" class="text-sm font-medium transition-colors">Home</a>
               <a href="how-it-works.html" data-nav="how" class="text-sm font-medium transition-colors">How it Works</a>
               <a href="coins.html" data-nav="coins" class="text-sm font-medium transition-colors">Coins</a>
-              <a href="reviews.html" data-nav="reviews" class="text-sm font-medium transition-colors">Reviews</a>
               <a href="rules.html" data-nav="rules" class="text-sm font-medium transition-colors">Rules</a>
             </div>
           </div>
@@ -83,12 +88,22 @@
           </div>
         </div>
 
-        <div>
+        <div data-reveal>
           <div class="flex items-center justify-between mb-6">
             <h2 class="text-xl font-medium text-white tracking-tight">Supported Coins</h2>
             <a href="coins.html" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors">View all →</a>
           </div>
           <div id="home-coins" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"></div>
+        </div>
+
+        <div data-reveal>
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl font-medium text-white tracking-tight">Recent Transactions</h2>
+            <span class="text-[11px] uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> live
+            </span>
+          </div>
+          <div id="recent-trades" class="space-y-2"></div>
         </div>
 
         <div class="p-6 rounded-xl border border-[#4f46e5]/20 bg-[#4f46e5]/5 flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center justify-between">
@@ -114,29 +129,6 @@
       </div>
 
       <aside class="w-full lg:w-80 space-y-6 flex-shrink-0">
-        <div class="rounded-xl border border-white/[0.06] bg-[#111]/50 p-5 relative overflow-hidden">
-          <div class="flex items-center gap-3 mb-4 relative z-10">
-            <div class="w-10 h-10 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
-              <iconify-icon icon="mdi:shield-check" class="text-indigo-400 text-xl"></iconify-icon>
-            </div>
-            <div>
-              <h3 class="text-sm font-medium text-white">Verified Server</h3>
-              <p class="text-xs text-zinc-500 mt-0.5">Official SwapSafe Discord</p>
-            </div>
-          </div>
-          <div class="space-y-3 relative z-10">
-            <div class="flex justify-between items-center text-xs"><span class="text-zinc-400">Server Boosts</span><span class="text-indigo-400 flex items-center gap-1"><iconify-icon icon="mdi:star-four-points"></iconify-icon>Level 3</span></div>
-            <div class="flex justify-between items-center text-xs"><span class="text-zinc-400">Active Middlemen</span><span class="text-white">12 Online</span></div>
-            <div class="flex justify-between items-center text-xs"><span class="text-zinc-400">Avg. Response</span><span class="text-emerald-400">&lt; 5 mins</span></div>
-          </div>
-          <div class="mt-5 pt-4 border-t border-white/[0.06] relative z-10">
-            <a data-discord href="#" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center justify-between group transition-colors">
-              Verify our Discord Link
-              <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
-            </a>
-          </div>
-        </div>
-
         <div class="rounded-xl border border-indigo-500/20 bg-indigo-500/5 p-5">
           <h3 class="text-sm font-medium text-indigo-300 mb-3 flex items-center gap-2 tracking-tight">
             <iconify-icon icon="solar:lock-password-linear"></iconify-icon>
@@ -178,7 +170,6 @@
         <span>© <span id="year"></span> SwapSafe Escrow. All rights reserved.</span>
         <div class="flex items-center gap-5">
           <a href="how-it-works.html" class="hover:text-zinc-300 transition-colors">How it Works</a>
-          <a href="reviews.html" class="hover:text-zinc-300 transition-colors">Reviews</a>
           <a href="rules.html" class="hover:text-zinc-300 transition-colors">Rules</a>
         </div>
       </div>
@@ -186,5 +177,6 @@
 
     <script src="_shared.js"></script>
     <script src="home-coins.js"></script>
+    <script src="recent.js"></script>
   </body>
 </html>

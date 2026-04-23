@@ -1,6 +1,8 @@
 window.SwapSafe = {
   discordInvite: "https://discord.gg/SBhJwyuedn",
   currentYear: new Date().getFullYear(),
+  supabaseUrl: "https://dxqjwrepjxjmygsdsyvy.supabase.co",
+  supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4cWp3cmVwanhqbXlnc2RzeXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4NzQyMjksImV4cCI6MjA5MjQ1MDIyOX0.s4PKpWoqv3AYy01z34b0WhNVCRY8XKAmIvCKFQojLRs",
 };
 
 // highlight
@@ -25,4 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const yr = document.getElementById("year");
   if (yr) yr.textContent = window.SwapSafe.currentYear;
+
+  // fade-in on scroll for anything marked [data-reveal]
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) {
+        e.target.classList.add("reveal-in");
+        io.unobserve(e.target);
+      }
+    }
+  }, { threshold: 0.12 });
+  document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
 });
