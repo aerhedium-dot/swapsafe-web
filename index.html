@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwapSafe - Secure Escrow & Middleman Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body data-page="home" class="bg-[#0a0a0a] text-zinc-300 antialiased selection:bg-indigo-500/30 selection:text-indigo-200" style="font-family: 'Inter', sans-serif;">
+    <div class="bg-emerald-500/10 border-b border-emerald-500/20 px-4 py-2 flex items-center justify-center gap-2">
+      <iconify-icon icon="solar:shield-check-linear" class="text-emerald-400 text-sm"></iconify-icon>
+      <span class="text-xs font-medium text-emerald-400/90 tracking-wide">All transactions are secured by our middleman escrow. Never release items or funds early.</span>
+    </div>
+
+    <nav class="border-b border-white/[0.06] bg-[#0a0a0a]/80 backdrop-blur-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-8">
+            <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
+              <div class="w-7 h-7 rounded-md bg-white flex items-center justify-center">
+                <iconify-icon icon="solar:safe-square-linear" class="text-black text-lg"></iconify-icon>
+              </div>
+              <span class="text-white font-semibold text-lg tracking-tighter">SwapSafe</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+              <a href="index.html" data-nav="home" class="text-sm font-medium transition-colors">Home</a>
+              <a href="how-it-works.html" data-nav="how" class="text-sm font-medium transition-colors">How it Works</a>
+              <a href="coins.html" data-nav="coins" class="text-sm font-medium transition-colors">Coins</a>
+              <a href="reviews.html" data-nav="reviews" class="text-sm font-medium transition-colors">Reviews</a>
+              <a href="rules.html" data-nav="rules" class="text-sm font-medium transition-colors">Rules</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-5">
+            <a data-discord href="#" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-md text-sm font-medium transition-colors flex items-center gap-2">
+              <iconify-icon icon="mdi:discord" class="text-lg"></iconify-icon>
+              Join Discord
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex flex-col lg:flex-row gap-10">
+      <div class="flex-1 space-y-6">
+        <div class="flex flex-col gap-4 py-4">
+          <h1 class="text-3xl md:text-4xl font-semibold tracking-tight text-white">Secure Trades on Discord</h1>
+          <p class="text-zinc-400 text-base leading-relaxed max-w-xl">SwapSafe provides a safe and reliable middleman service directly within our Discord server. Open a ticket, invite the buyer/seller, and let our verified middlemen handle the transaction.</p>
+          <div class="flex items-center gap-4 mt-2">
+            <a data-discord href="#" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-md text-sm font-medium transition-colors flex items-center gap-2 shadow-sm">
+              <iconify-icon icon="mdi:discord" class="text-xl"></iconify-icon>
+              Join Server
+            </a>
+            <a href="rules.html" class="px-6 py-3 bg-[#111] border border-white/[0.06] text-white hover:bg-zinc-800 rounded-md text-sm font-medium transition-colors">Read Rules</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-medium text-white mb-6 tracking-tight">How to Trade</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <a href="how-it-works.html" class="p-5 rounded-xl border border-white/[0.06] bg-[#111]/50 flex flex-col gap-3 hover:bg-[#111] transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-semibold text-lg">1</div>
+              <h3 class="text-white font-medium">Join & Open Ticket</h3>
+              <p class="text-sm text-zinc-500 leading-relaxed">Join our Discord server and navigate to the #open-ticket channel. Create a new escrow ticket.</p>
+            </a>
+            <a href="how-it-works.html" class="p-5 rounded-xl border border-white/[0.06] bg-[#111]/50 flex flex-col gap-3 hover:bg-[#111] transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-semibold text-lg">2</div>
+              <h3 class="text-white font-medium">Invite the Party</h3>
+              <p class="text-sm text-zinc-500 leading-relaxed">Ping the user you are trading with so they can join the ticket and confirm the trade terms.</p>
+            </a>
+            <a href="how-it-works.html" class="p-5 rounded-xl border border-white/[0.06] bg-[#111]/50 flex flex-col gap-3 hover:bg-[#111] transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-semibold text-lg">3</div>
+              <h3 class="text-white font-medium">Middleman Secures Assets</h3>
+              <p class="text-sm text-zinc-500 leading-relaxed">Our verified middleman will hold the funds or digital assets in a secure escrow wallet.</p>
+            </a>
+            <a href="how-it-works.html" class="p-5 rounded-xl border border-white/[0.06] bg-[#111]/50 flex flex-col gap-3 hover:bg-[#111] transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-semibold text-lg">4</div>
+              <h3 class="text-white font-medium">Completion</h3>
+              <p class="text-sm text-zinc-500 leading-relaxed">Once both parties confirm delivery, the middleman releases the assets. Trade complete!</p>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl font-medium text-white tracking-tight">Supported Coins</h2>
+            <a href="coins.html" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors">View all →</a>
+          </div>
+          <div id="home-coins" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"></div>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#4f46e5]/20 bg-[#4f46e5]/5 flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center justify-between">
+          <div>
+            <h3 class="text-white font-medium mb-1">Trusted by thousands</h3>
+            <p class="text-sm text-zinc-500">Join our active trading community</p>
+          </div>
+          <div class="flex gap-8">
+            <div class="flex flex-col">
+              <span class="text-2xl font-semibold text-white tracking-tight">15k+</span>
+              <span class="text-xs text-zinc-500 uppercase tracking-wider font-medium mt-1">Members</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-semibold text-white tracking-tight">50k+</span>
+              <span class="text-xs text-zinc-500 uppercase tracking-wider font-medium mt-1">Trades</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-semibold text-white tracking-tight">0</span>
+              <span class="text-xs text-zinc-500 uppercase tracking-wider font-medium mt-1">Scams</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="w-full lg:w-80 space-y-6 flex-shrink-0">
+        <div class="rounded-xl border border-white/[0.06] bg-[#111]/50 p-5 relative overflow-hidden">
+          <div class="flex items-center gap-3 mb-4 relative z-10">
+            <div class="w-10 h-10 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
+              <iconify-icon icon="mdi:shield-check" class="text-indigo-400 text-xl"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="text-sm font-medium text-white">Verified Server</h3>
+              <p class="text-xs text-zinc-500 mt-0.5">Official SwapSafe Discord</p>
+            </div>
+          </div>
+          <div class="space-y-3 relative z-10">
+            <div class="flex justify-between items-center text-xs"><span class="text-zinc-400">Server Boosts</span><span class="text-indigo-400 flex items-center gap-1"><iconify-icon icon="mdi:star-four-points"></iconify-icon>Level 3</span></div>
+            <div class="flex justify-between items-center text-xs"><span class="text-zinc-400">Active Middlemen</span><span class="text-white">12 Online</span></div>
+            <div class="flex justify-between items-center text-xs"><span class="text-zinc-400">Avg. Response</span><span class="text-emerald-400">&lt; 5 mins</span></div>
+          </div>
+          <div class="mt-5 pt-4 border-t border-white/[0.06] relative z-10">
+            <a data-discord href="#" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center justify-between group transition-colors">
+              Verify our Discord Link
+              <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-indigo-500/20 bg-indigo-500/5 p-5">
+          <h3 class="text-sm font-medium text-indigo-300 mb-3 flex items-center gap-2 tracking-tight">
+            <iconify-icon icon="solar:lock-password-linear"></iconify-icon>
+            How Escrow Protects You
+          </h3>
+          <ol class="space-y-4 relative border-l border-indigo-500/20 ml-2.5">
+            <li class="pl-5 relative">
+              <div class="absolute -left-1.5 top-0.5 w-3 h-3 rounded-full bg-[#0a0a0a] border-2 border-indigo-400"></div>
+              <p class="text-xs font-medium text-white mb-0.5">1. Escrow Funded</p>
+              <p class="text-[11px] text-zinc-500 leading-relaxed">Buyer deposits funds into our secure smart-contract escrow account.</p>
+            </li>
+            <li class="pl-5 relative">
+              <div class="absolute -left-1.5 top-0.5 w-3 h-3 rounded-full bg-[#0a0a0a] border-2 border-zinc-600"></div>
+              <p class="text-xs font-medium text-zinc-300 mb-0.5">2. Item Delivered</p>
+              <p class="text-[11px] text-zinc-500 leading-relaxed">Seller delivers the item or service to the buyer.</p>
+            </li>
+            <li class="pl-5 relative">
+              <div class="absolute -left-1.5 top-0.5 w-3 h-3 rounded-full bg-[#0a0a0a] border-2 border-zinc-600"></div>
+              <p class="text-xs font-medium text-zinc-300 mb-0.5">3. Funds Released</p>
+              <p class="text-[11px] text-zinc-500 leading-relaxed">Buyer inspects the item and approves. Escrow releases funds to the seller.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="rounded-xl border border-white/[0.06] bg-[#111]/50 p-5">
+          <h3 class="text-sm font-medium text-white mb-3">Anti-Scam Guidelines</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2 text-xs text-zinc-400"><iconify-icon icon="solar:danger-triangle-linear" class="text-amber-500 mt-0.5 flex-shrink-0"></iconify-icon><span class="leading-relaxed">Never communicate or trade outside your official Discord ticket.</span></li>
+            <li class="flex items-start gap-2 text-xs text-zinc-400"><iconify-icon icon="solar:danger-triangle-linear" class="text-amber-500 mt-0.5 flex-shrink-0"></iconify-icon><span class="leading-relaxed">Always verify the Middleman's Discord ID. Staff will never DM you first.</span></li>
+            <li class="flex items-start gap-2 text-xs text-zinc-400"><iconify-icon icon="solar:danger-triangle-linear" class="text-amber-500 mt-0.5 flex-shrink-0"></iconify-icon><span class="leading-relaxed">Beware of impersonators. Always double-check user profiles in the server.</span></li>
+          </ul>
+          <a href="rules.html" class="mt-4 block text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors">Read full rules →</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="border-t border-white/[0.06] mt-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-zinc-500">
+        <span>© <span id="year"></span> SwapSafe Escrow. All rights reserved.</span>
+        <div class="flex items-center gap-5">
+          <a href="how-it-works.html" class="hover:text-zinc-300 transition-colors">How it Works</a>
+          <a href="reviews.html" class="hover:text-zinc-300 transition-colors">Reviews</a>
+          <a href="rules.html" class="hover:text-zinc-300 transition-colors">Rules</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="_shared.js"></script>
+    <script src="home-coins.js"></script>
+  </body>
+</html>
